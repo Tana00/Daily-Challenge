@@ -23,8 +23,15 @@
         <div class="col col1 disabled">
           <a class="btn disabled" href="#">Friday 8th November 2019</a>
         </div>
-        <div class="col col2 disabled">
-          <a class="btn disabled" href="#">Wednesday 6th November 2019</a>
+        <div class="col col2">
+          <button
+            type="button"
+            class="btn"
+            data-toggle="modal"
+            data-target="#nov-6th"
+          >
+            Wednesday 6th November 2019
+          </button>
         </div>
         <div class="col col3">
           <a
@@ -261,6 +268,111 @@
             return true; <br />
             } <br />
             console.log(isPrime(38));
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Modal -->
+    <div
+      class="modal fade"
+      id="nov-6th"
+      tabindex="-1"
+      role="dialog"
+      aria-labelledby="exampleModalCenterTitle"
+      aria-hidden="true"
+    >
+      <div
+        class="modal-dialog modal-dialog-scrollable modal-dialog-centered"
+        role="document"
+      >
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalCenterTitle">
+              Wednesday 6th November 2019
+            </h5>
+            <button
+              type="button"
+              class="close"
+              data-dismiss="modal"
+              aria-label="Close"
+            >
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            <h4>Challenge</h4>
+            <p>
+              Differentiate between a for loop, for each and map in JavaScript.
+              Provide code examples to better illustrate your case.
+            </p>
+            <br />
+            <h4>Answer</h4>
+            <p>
+              <b>MAP()</b> method is used to iterate over an array and calling
+              function on every element of array.
+            </p>
+            <p>
+              var arr = document.getElementById('root'); <br />
+              <br />
+
+              // Map is being called directly on an array <br />
+              // Arrow function is used <br />
+              <br />
+              arr.innerHTML = [6, 7, 4, 5].map((val)=> { <br />
+              return val*val; <br />
+              })
+            </p>
+            <br />
+            <br />
+            <p>
+              <b>forEACH()</b> function calls the provided function once for
+              each element of the array.
+            </p>
+            <p>
+              const items = [1, 29, 47]; <br />
+              const copy = []; <br />
+
+              items.forEach(function(item){ <br />
+              copy.push(item*item); <br />
+              }); <br />
+              console.log(copy); //output = 1,841,2209 <br />
+            </p>
+            <br />
+            <br />
+            <p>
+              <b>FOR LOOP</b> is a concise way of writing the loop structure. A
+              forLoop statement consumes the initialization, condition and
+              increment/decrement in one line thereby providing a shorter, easy
+              to debug structure of looping.
+            </p>
+            <p>
+              var x; <br />
+              for loop begins when x=2 and runs till x <=4 <br /><br />
+              for (x = 2; x <= 4; x++) { <br />
+              document.write("Value of x:" + x + "<br />");<br />
+              } <br /><br />
+              Output: <br />
+              Value of x:2 <br />
+              Value of x:3
+              <br />Value of x:4
+            </p>
+            <br /><br />
+            <p>
+              <u>DIFFERENCE</u>
+            </p>
+            <p>
+              <u>forEach()</u> affects and changes our original Array, whereas
+              <u>map()</u> returns an entirely new Array — thus leaving the
+              original array unchanged.
+            </p>
+            <p>
+              <u>for loop</u> executes statement or block of statements
+              repeatedly until a specified expression evaluates to flase. <br />
+              While <u>forEach</u> and <u>map()</u>
+              repeates a group of embedded statements for each element in an
+              array or an object collection. Treats everything as a collection.
+            </p>
           </div>
         </div>
       </div>
