@@ -21,7 +21,37 @@
 
       <div class="row">
         <div class="col col1 disabled">
-          <a class="btn disabled" href="#">Friday 8th November 2019</a>
+          <a class="btn disabled" href="#">Wednesday 20th November 2019</a>
+        </div>
+        <div class="col col2">
+          <button
+            type="button"
+            class="btn"
+            data-toggle="modal"
+            data-target="#nov-6th"
+          >
+            Friday 15th November 2019
+          </button>
+        </div>
+        <div class="col col3">
+          <a
+            href="https://codepen.io/mtana/pen/yLLpyPP?editors=0011"
+            target="_blank"
+            >Wednesday 13th November 2019</a
+          >
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col col1">
+          <button
+            type="button"
+            class="btn"
+            data-toggle="modal"
+            data-target="#nov-8th"
+          >
+            Friday 8th November 2019
+          </button>
         </div>
         <div class="col col2">
           <button
@@ -372,6 +402,81 @@
               While <u>forEach</u> and <u>map()</u>
               repeates a group of embedded statements for each element in an
               array or an object collection. Treats everything as a collection.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Modal -->
+    <div
+      class="modal fade"
+      id="nov-8th"
+      tabindex="-1"
+      role="dialog"
+      aria-labelledby="exampleModalCenterTitle"
+      aria-hidden="true"
+    >
+      <div
+        class="modal-dialog modal-dialog-scrollable modal-dialog-centered"
+        role="document"
+      >
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalCenterTitle">
+              Friday 8th November 2019
+            </h5>
+            <button
+              type="button"
+              class="close"
+              data-dismiss="modal"
+              aria-label="Close"
+            >
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            <h4>Challenge</h4>
+            <p>
+              1. Why do we have to import react in functional components when
+              all we do is return a function. Is it not same as the old vanilla
+              JavaScript?
+            </p>
+            <p>
+              2. What do you understand about the
+              <i style="color: blue;">this</i> keyword in JavaScript.
+            </p>
+            <br />
+            <h4>Answer</h4>
+            <p>1. The reason is because of JSX. JSX is internally transpiled to use <code>React.createElement</code> in pure JavaScript, which does use React</p>
+
+            <br> <br>
+            <p>2. 
+              <b>ths</b> keyword refers to an object, that object which is
+              executing the current bit of javascript code. <br>
+              So not importing it, will report that <code>React</code> isn't defined
+            </p>
+            <p>
+               <ul>It has different values depending on where it is used:
+
+                <li>In a method, this refers to the owner object.</li>
+                <li> Alone, this refers to the global object.</li>
+                <li>In a function, this refers to the global object.</li>
+                <li>In a function, in strict mode, this is undefined.</li>
+                <li> In an event, this refers to the element that received the event.</li>
+                <li> Methods like call(), and apply() can refer this to any object.</li>
+              </ul> 
+            </p>
+            <p>
+              <p>Example:</p>
+                var person = { <br />
+                  firstName: "John", <br />
+                  lastName : "Doe", <br />
+                  id       : 5566, <br />
+                  fullName : function() { <br />
+                    return this.firstName + " " + this.lastName; <br />
+                   } <br />
+                }; <br />             
             </p>
           </div>
         </div>
