@@ -19,8 +19,15 @@
     <div class="container">
       <h1>Daily Challenges</h1>
       <div class="row">
-        <div class="col col1 disabled">
-          <a class="btn disabled" href="#">Friday 29th November 2019</a>
+        <div class="col col1">
+          <button
+            type="button"
+            class="btn"
+            data-toggle="modal"
+            data-target="#nov-29th"
+            >
+            Friday 29th November 2019
+          </button>
         </div>
         <div class="col col2">
           <a class="btn" href="https://repl.it/@Happy00/404-Page" target="_blank">Wednesday 27th November 2019</a>
@@ -109,9 +116,11 @@
 
       <div class="row">
         <div class="col col1">
+            <button class="btn">
           <a href="https://codepen.io/mtana/pen/bGGwxjw" target="_blank"
             >Friday 18th October 2019</a
           >
+          </button>
         </div>
         <div class="col col2">
           <a href="https://codepen.io/mtana/pen/PooJdGz" target="_blank"
@@ -162,11 +171,13 @@
           >
         </div>
         <div class="col col2">
+          <button class="btn">
           <a
             href="https://codepen.io/mtana/pen/ZEzPLqM?editors=1100"
             target="_blank"
             >Wednesday 25th September 2019</a
           >
+        </button>
         </div>
         <div class="col col3">
           <a
@@ -179,23 +190,29 @@
 
       <div class="row">
         <div class="col col1">
+            <button class="btn">
           <a
             href="https://codepen.io/mtana/pen/eYOPzpq?editors=1100"
             target="_blank"
             >Wednesday 18th September 2019</a
           >
+            </button>
         </div>
         <div class="col col2">
+            <button class="btn">
           <a
             href="https://codepen.io/mtana/pen/XWWeBqV?editors=1000"
             target="_blank"
             >Friday 13th September 2019</a
           >
+            </button>
         </div>
         <div class="col col3">
+            <button class="btn">
           <a href="https://codepen.io/mtana/pen/vYBjGMQ" target="_blank"
             >Wednesday 11th September 2019</a
           >
+            </button>
         </div>
       </div>
     </div>
@@ -487,6 +504,98 @@
                 }; <br />    
                 // returns John Doe         
             </p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Modal -->
+    <div
+      class="modal fade"
+      id="nov-29th"
+      tabindex="-1"
+      role="dialog"
+      aria-labelledby="exampleModalCenterTitle"
+      aria-hidden="true"
+    >
+      <div
+        class="modal-dialog modal-dialog-scrollable modal-dialog-centered"
+        role="document"
+      >
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalCenterTitle">
+              Friday 29th November 2019
+            </h5>
+            <button
+              type="button"
+              class="close"
+              data-dismiss="modal"
+              aria-label="Close"
+            >
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            <h4>Challenge</h4>
+            <p>
+              1. what is the purpose of switch in react routing
+            </p>
+            <p>
+              2. With example, show a simple routing process in React
+            </p>
+            <br />
+            <h4>Answer</h4>
+            <p>1. React-router-dom uses a component within the BrowserRouter called <code>Switch</code>,
+              switch is basically the react-router equivalent to a JavaScript switch statement. <br> <br>
+              A Switch renders the first child <Route> or <Redirect> that matches the location. <br>
+              <code>Switch</code> is unique in that it renders a route exclusively. 
+              In contrast, every <code>Route</code> that matches the location renders inclusively.
+            </p>
+
+            <br> <br>
+            <p>2. <br>
+    <xmp>
+      let {BrowserRouter, Link,Route} = ReactRouterDOM;
+      
+      let Router = BrowserRouter;
+
+      class App extends React.Component{
+        render(){
+          return(
+          <Router>
+              <div className="container">
+              <ul>
+                <li><Link to="/">Home</Link></li>
+                <li><Link to="/about">About</Link></li>
+              </ul>
+            <hr/>
+            <Route exact path="/" component={Home} /> 
+            <Route path="/about" component={About} />   
+              </div>
+          </Router>
+          )
+        }
+      }
+      
+      
+      const Home = ()=> (
+        <div>
+          <h1>Home</h1>
+          <p>This is the Home Page</p> 
+        </div>
+      )
+      
+      
+      const About = ()=>(
+        <div>
+          <h1>About</h1>
+          <p>This is about</p>
+        </div>
+      )
+      
+      ReactDOM.render(<App />,document.getElementById('app'));
+    </xmp>
           </div>
         </div>
       </div>
